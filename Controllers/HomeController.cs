@@ -1,50 +1,29 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MVCAssigment.Models;
-
+using MVCAssigment.Services;
 namespace MVCAssigment.Controllers;
-
 public class HomeController : Controller
 {
-    public static List<Person> list = Function.AddMember();
+    private MemberServices _services;
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+        _services = new MemberServices();
     }
 
-    public IActionResult SearchMalePerson()
+    public IActionResult Index()
     {
-        foreach (Person item in list)
-        {
-            if (item.Gender.Equals("Male"))
-            {
-                Debug.WriteLine(item);
-            }
-        }
-        return View();
-    }
-
-    public IActionResult SearchOldestPerson()
-    {
-        Person p = Function.GetOldestPerson(list);
-        Debug.WriteLine(p);
-        return View();
-    }
-
-    [Route("/Nashtech/Rookies/Index")]
-    public IActionResult ShowFullNameOfPerson()
-    {
-        Function.GetFullNameOfPerson(list);
-        return View();
+        var listPerson = _services.ListPerson();
+        return View(listPerson);
     }
 
     public IActionResult SaveFile()
     {
         return View();
     }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
