@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using MVCAssigment.DataAccess;
 using MVCAssigment.Models;
 using MVCAssigment.Services;
 namespace MVCAssigment.Controllers;
@@ -16,13 +17,24 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var listPerson = _services.ListPerson();
-        return View(listPerson);
+        return View(_services.ListPerson());
     }
-
-    public IActionResult SaveFile()
+    [HttpGet]
+    public IActionResult Create()
     {
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(PersonCreateModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            _services.AddPerson(model);
+            return RedirectToAction("Index");
+        }
+
+        return View(model);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

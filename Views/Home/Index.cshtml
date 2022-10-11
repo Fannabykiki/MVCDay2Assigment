@@ -5,7 +5,10 @@
 }
 
 <div class="text-center">
-    <div><b>Table Format Data Displaying in ForEach</b><br /></div>
+    <div><b>Information list</b><br /></div>
+    <div>
+        <a type="button" class="btn btn-primary btn-md" asp-controller="Home" asp-action="Create" >Add new person</a>
+    </div>
     <table class="table table-bordered table-responsive table-hover">
         <tr>
             <th>FirstName </th>
@@ -15,6 +18,7 @@
             <th>PhoneNumber</th>
             <th>BirthPlace</th>
             <th>IsGraduated</th>
+            <th>Actions</th>
         </tr>
         @foreach (var d in Model)
         {
@@ -22,10 +26,12 @@
                 <td>@d.FirstName</td>
                 <td>@d.LastName</td>
                 <td>@d.Gender</td>
-                <td>@d.DateOfBirth</td>
+                <td>@d.DateOfBirth.ToString("dd/MM/yyyy")</td>
                 <td>@d.PhoneNumber</td>
                 <td>@d.BirthPlace</td>
                 <td>@d.IsGraduated</td>
+                <td><button type="button" class="btn btn-outline-success mr-5">Edit</button>
+                <button type="button" class="btn btn-outline-danger">Delete</button></td>
             </tr>
         }
     </table>

@@ -2,12 +2,12 @@ namespace MVCAssigment.DataAccess
 {
     public class StaticDataAccess
     {
-        List<Person> person = new List<Person>(){
+        List<Person> listPerson = new List<Person>(){
             new Person
             {
                 FirstName = "Phan",
                 LastName = "Nam",
-                Gender = 1,
+                Gender = "Male",
                 DateOfBirth = new DateTime(1999, 10, 18),
                 PhoneNumber = "0396373132",
                 BirthPlace = "Ha Noi",
@@ -18,7 +18,7 @@ namespace MVCAssigment.DataAccess
             {
                 FirstName = "Tran",
                 LastName = "Linh",
-                Gender = 1,
+                Gender = "Male",
                 DateOfBirth = new DateTime(2003, 10, 15),
                 PhoneNumber = "0396373132",
                 BirthPlace = "Bac Ninh",
@@ -29,7 +29,7 @@ namespace MVCAssigment.DataAccess
             {
                 FirstName = "Dao",
                 LastName = "Trang",
-                Gender = 1,
+                Gender = "FeMale",
                 DateOfBirth = new DateTime(2003, 07, 13),
                 PhoneNumber = "0396373132",
                 BirthPlace = "SG",
@@ -40,7 +40,7 @@ namespace MVCAssigment.DataAccess
             {
                 FirstName = "Duy",
                 LastName = "Anh",
-                Gender = 1,
+                Gender = "FeMale",
                 DateOfBirth = new DateTime(2000, 11, 30),
                 PhoneNumber = "0396373132",
                 BirthPlace = "Ha Noi",
@@ -48,9 +48,15 @@ namespace MVCAssigment.DataAccess
                 IsGraduated = true
             }
         };
+
         public List<Person> ShowAllPerson()
         {
-            return person;
+            return listPerson;
+        }
+
+        public void AddPerson(Person person)
+        {
+             listPerson.Add(person);
         }
     }
 }

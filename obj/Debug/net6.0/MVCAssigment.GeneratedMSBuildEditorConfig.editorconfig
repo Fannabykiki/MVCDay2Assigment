@@ -15,36 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Rookies\CodeC#\MVCAssigment
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Rookies/CodeC\#/MVCAssigment/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/OldestPerson.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPbGRlc3RQZXJzb24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/SaveFile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYXZlRmlsZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/SearchMalePerson.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hNYWxlUGVyc29uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/ShowFullNameOfPerson.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93RnVsbE5hbWVPZlBlcnNvbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/YearOfBirthEqual2000.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZWFyT2ZCaXJ0aEVxdWFsMjAwMC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/YearOfBirthLess2000.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZWFyT2ZCaXJ0aExlc3MyMDAwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Rookies/CodeC\#/MVCAssigment/Views/Home/YearOfBirthThan2000 copy 2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZWFyT2ZCaXJ0aFRoYW4yMDAwIGNvcHkgMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Rookies/CodeC\#/MVCAssigment/Views/Shared/Error.cshtml]
