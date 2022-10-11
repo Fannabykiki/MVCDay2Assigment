@@ -49,6 +49,9 @@ namespace MVCAssigment.DataAccess
             }
         };
 
+        public StaticDataAccess(){
+            
+        }
         public List<Person> ShowAllPerson()
         {
             return listPerson;

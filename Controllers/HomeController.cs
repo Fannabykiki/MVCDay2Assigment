@@ -6,7 +6,7 @@ using MVCAssigment.Services;
 namespace MVCAssigment.Controllers;
 public class HomeController : Controller
 {
-    private MemberServices _services;
+    private readonly MemberServices _services;
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)

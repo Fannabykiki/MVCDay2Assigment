@@ -11,7 +11,7 @@ namespace MVCAssigment.Services
 
         public void AddPerson(PersonCreateModel personCreate)
         {
-            Person person = new Person
+            Person person = new Person()
             {
                 FirstName = personCreate.FirstName,
                 LastName = personCreate.LastName,
@@ -25,8 +25,24 @@ namespace MVCAssigment.Services
         }
         public List<Person> ListPerson()
         {
-            return _dataAccess.ShowAllPerson();
-        }
+            var listApplicationModels = _dataAccess.ShowAllPerson();
+            
+            var listCreateModels = new List<Person>();
+            foreach (var item in listApplicationModels)
+            {   
+                listCreateModels.Add( new Person {
+                    FirstName = item.FirstName,
+                    LastName = item.LastName,
+                    DateOfBirth = item.DateOfBirth,
+                    Age =20,
+                    Gender = item.Gender,
+                    IsGraduated= false,
+                    PhoneNumber = item.PhoneNumber,
+                    BirthPlace = item.BirthPlace                 
+                });
+            }
 
+            return listCreateModels;
+        }
     }
 }
