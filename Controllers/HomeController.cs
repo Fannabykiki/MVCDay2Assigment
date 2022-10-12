@@ -1,18 +1,17 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using MVCAssigment.DataAccess;
 using MVCAssigment.Models;
 using MVCAssigment.Services;
+using MVCAssigment.Services.Container;
 namespace MVCAssigment.Controllers;
 public class HomeController : Controller
 {
-    private readonly MemberServices _services;
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IServicesInterface _services;
+    public HomeController(ILogger<HomeController> logger, IServicesInterface services)
     {
         _logger = logger;
-        _services = new MemberServices();
+        _services = services;
     }
 
     public IActionResult Index()

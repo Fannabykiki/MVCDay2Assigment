@@ -1,6 +1,6 @@
 namespace MVCAssigment.DataAccess
 {
-    public class StaticDataAccess
+    public class StaticDataAccess : Services.Container.IDataAccess
     {
         List<Person> listPerson = new List<Person>(){
             new Person

@@ -1,7 +1,13 @@
+using MVCAssigment.DataAccess;
+using MVCAssigment.Services;
+using MVCAssigment.Services.Container;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IDataAccess,StaticDataAccess>();
+builder.Services.AddTransient<IServicesInterface,MemberServices>();
 
 var app = builder.Build();
 

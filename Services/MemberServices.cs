@@ -1,12 +1,14 @@
 using MVCAssigment.DataAccess;
+using MVCAssigment.Services.Container;
+
 namespace MVCAssigment.Services
 {
-    public class MemberServices
+    public class MemberServices : IServicesInterface
     {
-        private readonly StaticDataAccess _dataAccess;
-        public MemberServices()
+        private readonly IDataAccess _dataAccess;
+        public MemberServices(IDataAccess dataAccess)
         {
-            _dataAccess = new StaticDataAccess();
+            _dataAccess = dataAccess;
         }
 
         public void AddPerson(PersonCreateModel personCreate)
