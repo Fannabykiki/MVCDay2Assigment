@@ -2,7 +2,7 @@ namespace MVCAssigment.DataAccess
 {
     public class StaticDataAccess : Services.Container.IDataAccess
     {
-        List<Person> listPerson = new List<Person>(){
+       public static List<Person> listPerson = new List<Person>(){
             new Person
             {
                 FirstName = "Phan",
@@ -37,7 +37,7 @@ namespace MVCAssigment.DataAccess
                 IsGraduated = true
             },
             new Person
-            {
+            {   
                 FirstName = "Duy",
                 LastName = "Anh",
                 Gender = "FeMale",
@@ -46,7 +46,7 @@ namespace MVCAssigment.DataAccess
                 BirthPlace = "Ha Noi",
                 Age = 21,
                 IsGraduated = true
-            }
+            }          
         };
 
         public StaticDataAccess(){

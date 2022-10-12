@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MVCAssigment.DataAccess.Person>
-
+﻿@model List<MVCAssigment.DataAccess.Person>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -11,6 +10,7 @@
     </div>
     <table class="table table-bordered table-responsive table-hover">
         <tr>
+            <th>ID</th>
             <th>FirstName </th>
             <th>LastName </th>
             <th>Gender </th>
@@ -20,19 +20,22 @@
             <th>IsGraduated</th>
             <th>Actions</th>
         </tr>
-        @foreach (var d in Model)
-        {
+        @for (int i = 0; i < Model.Count; i++)
+        {       
+            var person = Model[i];
             <tr>
-                <td>@d.FirstName</td>
-                <td>@d.LastName</td>
-                <td>@d.Gender</td>
-                <td>@d.DateOfBirth.ToString("dd/MM/yyyy")</td>
-                <td>@d.PhoneNumber</td>
-                <td>@d.BirthPlace</td>
-                <td>@d.IsGraduated</td>
-                <td><button type="button" class="btn btn-outline-success mr-5">Edit</button>
-                <button type="button" class="btn btn-outline-danger">Delete</button></td>
+                <td scope ="row" class="text-right">@(i+1)</td>              
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>@person.Gender</td>
+                <td>@person.DateOfBirth.ToString("dd/MM/yyyy")</td>
+                <td>@person.PhoneNumber</td>
+                <td>@person.BirthPlace</td>
+                <td>@person.IsGraduated</td>
+                <td><a type="button" class="btn btn-outline-success mr-5" asp-controller="Home" asp-action="Edit" asp-route-index="@i">Edit</a>
+                <a type="button" class="btn btn-outline-danger">Delete</a></td>
             </tr>
+        
         }
     </table>
 

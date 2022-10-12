@@ -14,12 +14,13 @@ namespace MVCAssigment.Services
         public void AddPerson(PersonCreateModel personCreate)
         {
             Person person = new Person()
-            {
+            {   
                 FirstName = personCreate.FirstName,
                 LastName = personCreate.LastName,
                 DateOfBirth = personCreate.DateOfBirth,
                 PhoneNumber = personCreate.PhoneNumber,
-                Gender = personCreate.PhoneNumber,
+                Gender = personCreate.Gender,
+                BirthPlace = personCreate.BirthPlace,
                 Age = 20,
                 IsGraduated = false
             };

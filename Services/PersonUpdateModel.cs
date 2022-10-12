@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MVCAssigment.Services
 {
-    public class PersonCreateModel
+    public class PersonUpdateModel
     {
+    
         [DisplayName("First Name"), Required(ErrorMessage = "{0} is required!!")]
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
@@ -13,7 +14,7 @@ namespace MVCAssigment.Services
         public string? PhoneNumber { get; set; }
         public string? BirthPlace { get; set; }
 
-        public PersonCreateModel()
+        public PersonUpdateModel()
         {
         }
     }
