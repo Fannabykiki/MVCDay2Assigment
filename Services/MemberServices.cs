@@ -13,7 +13,7 @@ namespace MVCAssigment.Services
 
         public void AddPerson(PersonCreateModel personCreate)
         {
-            Person person = new Person()
+            PersonViewModel person = new PersonViewModel()
             {   
                 FirstName = personCreate.FirstName,
                 LastName = personCreate.LastName,
@@ -26,14 +26,14 @@ namespace MVCAssigment.Services
             };
             _dataAccess.AddPerson(person);
         }
-        public List<Person> ListPerson()
+        public List<PersonViewModel> ListPerson()
         {
             var listApplicationModels = _dataAccess.ShowAllPerson();
             
-            var listCreateModels = new List<Person>();
+            var listCreateModels = new List<PersonViewModel>();
             foreach (var item in listApplicationModels)
             {   
-                listCreateModels.Add( new Person {
+                listCreateModels.Add( new PersonViewModel {
                     FirstName = item.FirstName,
                     LastName = item.LastName,
                     DateOfBirth = item.DateOfBirth,
