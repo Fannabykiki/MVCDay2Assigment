@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IDataAccess,StaticDataAccess>();
-builder.Services.AddTransient<IServicesInterface,MemberServices>();
+builder.Services.AddSingleton<IDataAccess,StaticDataAccess>();
+builder.Services.AddSingleton<IServicesInterface,MemberServices>();
 
 var app = builder.Build();
 

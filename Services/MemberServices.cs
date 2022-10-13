@@ -3,9 +3,9 @@ using MVCAssigment.Services.Container;
 
 namespace MVCAssigment.Services
 {
-    public class MemberServices : IServicesInterface
+    public  class MemberServices : IServicesInterface
     {
-        private readonly IDataAccess _dataAccess;
+        private  readonly IDataAccess _dataAccess;
         public MemberServices(IDataAccess dataAccess)
         {
             _dataAccess = dataAccess;

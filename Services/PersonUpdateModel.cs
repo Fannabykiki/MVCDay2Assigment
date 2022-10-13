@@ -5,7 +5,6 @@ namespace MVCAssigment.Services
 {
     public class PersonUpdateModel
     {
-    
         [DisplayName("First Name"), Required(ErrorMessage = "{0} is required!!")]
         public string? FirstName { get; set; }
         public string? LastName { get; set; }

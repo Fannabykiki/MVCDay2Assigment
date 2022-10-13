@@ -3,8 +3,8 @@ namespace MVCAssigment.Services.Container
 {
     public interface IDataAccess
     {
-        List<Person> ShowAllPerson();
-        void AddPerson(Person person);
+        List<PersonViewModel> ShowAllPerson();
+        void AddPerson(PersonViewModel person);
         
     }
 }

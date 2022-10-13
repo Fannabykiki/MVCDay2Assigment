@@ -2,8 +2,8 @@ namespace MVCAssigment.DataAccess
 {
     public class StaticDataAccess : Services.Container.IDataAccess
     {
-       public static List<Person> listPerson = new List<Person>(){
-            new Person
+       public static List<PersonViewModel> listPerson = new List<PersonViewModel>(){
+            new PersonViewModel
             {
                 FirstName = "Phan",
                 LastName = "Nam",
@@ -14,7 +14,7 @@ namespace MVCAssigment.DataAccess
                 Age = 21,
                 IsGraduated = true
             },
-            new Person
+            new PersonViewModel
             {
                 FirstName = "Tran",
                 LastName = "Linh",
@@ -25,7 +25,7 @@ namespace MVCAssigment.DataAccess
                 Age = 29,
                 IsGraduated = false
             },
-            new Person
+            new PersonViewModel
             {
                 FirstName = "Dao",
                 LastName = "Trang",
@@ -36,7 +36,7 @@ namespace MVCAssigment.DataAccess
                 Age = 29,
                 IsGraduated = true
             },
-            new Person
+            new PersonViewModel
             {   
                 FirstName = "Duy",
                 LastName = "Anh",
@@ -52,12 +52,12 @@ namespace MVCAssigment.DataAccess
         public StaticDataAccess(){
             
         }
-        public List<Person> ShowAllPerson()
+        public List<PersonViewModel> ShowAllPerson()
         {
             return listPerson;
         }
 
-        public void AddPerson(Person person)
+        public void AddPerson(PersonViewModel person)
         {
              listPerson.Add(person);
         }

@@ -1,6 +1,6 @@
 namespace MVCAssigment.DataAccess
 {
-    public class Person
+    public class PersonViewModel
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
@@ -11,7 +11,7 @@ namespace MVCAssigment.DataAccess
         public uint Age { get; set; }
         public bool? IsGraduated { get; set; }
 
-        public Person(string firstname, string lastname, string gender, DateTime dob,
+        public PersonViewModel(string firstname, string lastname, string gender, DateTime dob,
          string phonenumber, string birthplace, uint age, bool isgraduated)
         {
             FirstName = firstname;
@@ -24,7 +24,7 @@ namespace MVCAssigment.DataAccess
             IsGraduated = isgraduated;
         }
 
-        public Person()
+        public PersonViewModel()
         {
         }
 

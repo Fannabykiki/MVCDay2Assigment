@@ -1,42 +1,60 @@
 ﻿@model List<MVCAssigment.DataAccess.PersonViewModel>
 @{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <div><b>Information list</b><br /></div>
-    <div>
-        <a type="button" class="btn btn-primary btn-md" asp-controller="Home" asp-action="Create" >Add new person</a>
-    </div>
-    <table class="table table-bordered table-responsive table-hover">
-        <tr>
-            <th>ID</th>
-            <th>FirstName </th>
-            <th>LastName </th>
-            <th>Gender </th>
-            <th>DateOfBirth</th>
-            <th>PhoneNumber</th>
-            <th>BirthPlace</th>
-            <th>IsGraduated</th>
-            <th>Actions</th>
-        </tr>
-        @for (int i = 0; i < Model.Count; i++)
-        {       
-            var person = Model[i];
-            <tr>
-                <td scope ="row" class="text-right">@(i+1)</td>              
-                <td>@person.FirstName</td>
-                <td>@person.LastName</td>
-                <td>@person.Gender</td>
-                <td>@person.DateOfBirth.ToString("dd/MM/yyyy")</td>
-                <td>@person.PhoneNumber</td>
-                <td>@person.BirthPlace</td>
-                <td>@person.IsGraduated</td>
-                <td><a type="button" class="btn btn-outline-success mr-5" asp-controller="Home" asp-action="Edit" asp-route-index="@i">Edit</a>
-                <a type="button" class="btn btn-outline-danger">Delete</a></td>
-            </tr>
-        
-        }
-    </table>
+  <div><b>Information list</b><br /></div>
+  <div>
+    <a type="button" class="btn btn-primary btn-md" asp-controller="Home" asp-action="Create">Add new person</a>
+  </div>
+  <table class="table table-bordered table-responsive table-hover">
+    <tr>
+      <th>ID</th>
+      <th>FirstName </th>
+      <th>LastName </th>
+      <th>Gender </th>
+      <th>DateOfBirth</th>
+      <th>PhoneNumber</th>
+      <th>BirthPlace</th>
+      <th>IsGraduated</th>
+      <th>Actions</th>
+    </tr>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+      var person = Model[i];
+      <tr>
+        <td scope="row" class="text-right">@(i+1)</td>
+        <td>@person.FirstName</td>
+        <td>@person.LastName</td>
+        <td>@person.Gender</td>
+        <td>@person.DateOfBirth.ToString("dd/MM/yyyy")</td>
+        <td>@person.PhoneNumber</td>
+        <td>@person.BirthPlace</td>
+        <td>@person.IsGraduated</td>
+        <td>
+          <a type="button" class="btn btn-outline-success mr-5" asp-controller="Home" asp-action="Edit"
+          asp-route-index="@i">Edit</a>
+          <a type="button" class="btn btn-outline-danger" href="" data-toggle="modal"
+          data-target="#exampleModal"  onclick="testConfirmDialog()">Delete</a>
+        </td>
+      </tr>
 
-</div>
+    }
+  </table>
+
+
+  <script type="text/javascript">
+
+         function testConfirmDialog()  {
+
+              var result = confirm("Do you want delete?");
+
+              if(result)  {
+                  alert("Confirm!");
+              } else {
+                  alert("Cancel");
+              }
+         }
+
+      </script>
