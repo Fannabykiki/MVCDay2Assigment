@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rookies\\CodeC#\\MVCAssigment\\MVCAssigment.csproj",
+      "projectUniqueName": "c:\\Users\\phanl\\OneDrive\\Desktop\\MVCAssigmentDay2\\MVCAssigment.csproj",
       "projectName": "MVCAssigment",
-      "projectPath": "D:\\Rookies\\CodeC#\\MVCAssigment\\MVCAssigment.csproj",
+      "projectPath": "c:\\Users\\phanl\\OneDrive\\Desktop\\MVCAssigmentDay2\\MVCAssigment.csproj",
       "packagesPath": "C:\\Users\\phanl\\.nuget\\packages\\",
-      "outputPath": "D:\\Rookies\\CodeC#\\MVCAssigment\\obj\\",
+      "outputPath": "c:\\Users\\phanl\\OneDrive\\Desktop\\MVCAssigmentDay2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phanl\\AppData\\Roaming\\NuGet\\NuGet.Config",
